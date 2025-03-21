@@ -15,5 +15,3 @@ int main(){
 }
 ```
 
-![apple](https://th.bing.com/th/id/OIP.zbBlcQgnbPjn9ezqaLwCfAHaHa?rs=1&pid=ImgDetMain)
-
