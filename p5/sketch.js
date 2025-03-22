@@ -16,10 +16,10 @@ function preload() {
   // mp3 파일 미리 로드
   soundFormats('mp3');
   audioFiles = { 
-    0: loadSound('sound/How_Do_I_Say_Goodbye-Dean_Lewis.mp3'), // 기본 모드 음악
-    1: loadSound('sound/Someone_You_Loved-Lewis_Capaldi.mp3'),   // 1번 모드 음악
-    2: loadSound('sound/나의_바람-비투비.mp3'),   // 2번 모드 음악
-    3: loadSound('sound/Try_eveything-주토피아OST.mp3')    // 3번 모드 음악
+    0: loadSound('sound/Bicycle Ride - Jeremy Korpas.mp3'), // 기본 모드 음악
+    1: loadSound('sound/The Creepy Clown - Jeremy Korpas.mp3'),   // 1번 모드 음악
+    2: loadSound('sound/My First True Love - Jeremy Korpas.mp3'),   // 2번 모드 음악
+    3: loadSound('sound/Pajama Party - Jeremy Korpas.mp3')    // 3번 모드 음악
   };
 }
 
@@ -141,21 +141,21 @@ function parseSerialData(data) {
       if (token === "MODE0") {
         modeText = "기본모드"; 
         changeMusic(0);
-        songTitle = "How Do I Say Goodbye - Dean Lewis"; // 기본모드 음악 제목
+        songTitle = "Bicycle Ride - Jeremy Korpas"; // 기본모드 음악 제목
       }
       else if (token === "MODE1") {
         modeText = "1번모드"; 
         changeMusic(1);
-        songTitle = "Someone You Loved - Lewis Capaldi"; // 1번모드 음악 제목
+        songTitle = "The Creepy Clown - Jeremy Korpas"; // 1번모드 음악 제목
       }
       else if (token === "MODE2") {
         modeText = "2번모드"; 
         changeMusic(2);
-        songTitle = "나의 바람 - 비투비"; // 2번모드 음악 제목
+        songTitle = "sound/My First True Love - Jeremy Korpas"; // 2번모드 음악 제목
       }
       else if (token === "MODE3") {  
         modeText = "3번모드"; 
-        songTitle = "Try Everything - 주토피아 OST"; // 3번모드 음악 제목
+        songTitle = "Pajama Party - Jeremy Korpas"; // 3번모드 음악 제목
         changeMusic(3);
       }
     }
@@ -209,7 +209,7 @@ async function connectBtnClick() {
     connectBtn.html("Connected"); // 버튼 텍스트 변경
     currentAudio = audioFiles[0]; // 기본 모드 음악 설정
     currentAudio.loop(); // 기본 모드 음악 반복 재생 시작
-    songTitle = 'How Do I Say Goodbye - Dean Lewis'; // 기본 모드의 노래 제목 표시
+    songTitle = 'Bicycle Ride - Jeremy Korpas'; // 기본 모드의 노래 제목 표시
     console.log("Serial Connected!");
 
     writer = port.writable.getWriter(); // 쓰기 스트림 가져오기

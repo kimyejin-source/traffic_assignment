@@ -229,7 +229,6 @@ bool redOE() {
   redState = true; // 빨간불 켜기
   return true;
 }
-
 void redOD() {
   redState = false; // 빨간불 끄기
   yellow.restartDelayed(); // 노란불 Task 지연 시작
@@ -239,12 +238,10 @@ bool yellowOE() {
   yellowState = true; // 노란불 켜기
   return true;
 }
-
 void yellowOD() {
   yellowState = false; // 노란불 끄기
   green.restartDelayed(); // 초록불 Task 지연 시작
 }
-
 void yellowOD_2() {
   yellowState = false; // 노란불 끄기
   red.restartDelayed(); // 빨간불 Task 지연 시작
@@ -254,7 +251,6 @@ bool greenOE() {
   greenState = true; // 초록불 켜기
   return true;
 }
-
 void greenOD() {
   greenState = false; // 초록불 끄기
   greenBlink.restartDelayed(); // 초록불 깜빡임 Task 지연 시작
@@ -264,11 +260,9 @@ bool greenBlinkOE() {
   greenState = false; // 초록불 끄기
   return true;
 }
-
 void greenBlinkCB()  {
   greenState = !greenState; // 초록불 상태 반전
 }
-
 void greenBlinkOD() {
   greenState = false; // 초록불 끄기
   yellow_2.restartDelayed(); // 노란불 Task 지연 시작 (다른 용도)
@@ -281,7 +275,6 @@ void allBlinkCB() {
   yellowState = allState; // 노란불 상태 설정
   greenState = allState; // 초록불 상태 설정
 }
-
 void allBlinkOD() {
   redState = false; // 빨간불 끄기
   yellowState = false; // 노란불 끄기
