@@ -79,4 +79,4 @@
 ---
 
 ## **동작 영상** 
-https://youtu.be/fWByR672ELc
+https://youtu.be/rosiF3iOuCo
